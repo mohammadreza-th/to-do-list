@@ -1,3 +1,4 @@
+/* بسم الله الرحمن الرحیم */
 :root {
   --green-set-1: rgb(0, 40, 0);
   --green-set-2: rgb(0, 60, 0);
@@ -45,6 +46,7 @@ main {
   height: 500px;
 }
 #stage {
+  
   padding-bottom: 10px;
   margin-bottom: 10px;
   display: flex;
@@ -57,6 +59,9 @@ main {
 }
 #card__describtion {
   background-color: var(--green-set-7);
+}
+#card__importance{
+  accent-color:var(--green-set-3)
 }
 
 #cards__container {
@@ -87,3 +92,13 @@ main {
 .card input:disabled {
   color: none;
 }
+
+.card__importance{
+  accent-color: var(--green-set-3);
+  background-color: red;
+
+}
+.card__importance:-webkit-slider-thumb:disabled {
+  accent-color: var(--green-set-1);
+  background-color: red;
+} 
