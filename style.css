@@ -1,48 +1,89 @@
+:root {
+  --green-set-1: rgb(0, 40, 0);
+  --green-set-2: rgb(0, 60, 0);
+  --green-set-3: rgb(0, 100, 0);
+  --green-set-4: rgb(100, 150, 100);
+  --green-set-5: rgb(150, 200, 150);
+  --green-set-6: rgb(200, 255, 200);
+  --green-set-7: rgb(230, 255, 230);
 
+  --red-set-1: rgb(50, 0, 0);
+  --red-set-2: rgb(100, 0, 0);
+  --red-set-3: rgb(150, 0, 0);
+  --red-set-4: rgb(200, 0, 0);
+  --red-set-5: rgb(255, 150, 150);
+  --red-set-6: rgb(255, 200, 200);
 
+  --blue-set-1: rgb(0, 0, 50);
+  --blue-set-2: rgb(0, 0, 100);
+  --blue-set-3: rgb(0, 0, 150);
+  --blue-set-4: rgb(0, 0, 200);
+}
+input{
+    background-color:none;
+    border:none
+}
+button{
+    color: var(--green-set-3);
+    border: none;
+}
+button:hover{
+    background-color: var(--green-set-3);
+    color: white;
+}
+
+header {
+  text-align: center;
+  color: var(--green-set-3)
+}
 main {
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    
-    align-items: center;
-    height: 500px;
-}
-#stage{
-    padding-bottom: 10px;
-    margin-bottom: 10px;
-    display: flex;
-    justify-content: space-between;
-border-bottom: 3px solid red
-}
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
 
-#cards__container{
-display: grid;
-grid-template-columns: repeat(8, 1fr);
-grid-gap: 10px;
-
+  align-items: center;
+  height: 500px;
 }
-.card{
-box-shadow: 1px 1px 5px 1px grey;
-border-radius: 3px;
-max-width: 100px;
+#stage {
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-bottom: 3px solid red;
 }
-.card__title{
-    color: green;
-    font-size: 20px;
-    text-align: center;
-    border-bottom: 1px solid green;
+#card__title {
+  background-color: var(--green-set-7);
 }
-.card__describtion{
-    margin-top:5px;
-    text-align: justify;
-    text-justify: auto;
-    padding:0 5px;
-
+#card__describtion {
+  background-color: var(--green-set-7);
 }
 
-
-
-
-
-
+#cards__container {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-gap: 10px;
+}
+.card {
+  box-shadow: 1px 1px 5px 1px grey;
+  border-radius: 3px;
+  width: 114px;
+}
+.card__title {
+  color: var(--green-set-2);
+  font-size: 20px;
+  text-align: center;
+  border-bottom: 1px solid green;
+  width: 90px;
+}
+.card__describtion {
+  width: 90px;
+  margin-top: 5px;
+  text-align: justify;
+  text-justify: auto;
+  padding: 0 5px;
+  color: var(--green-set-1);
+}
+.card input:disabled {
+  color: none;
+}

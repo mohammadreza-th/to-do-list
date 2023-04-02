@@ -9,18 +9,19 @@
     <script src="./index.js" defer></script>
   </head>
   <body>
-    <header><h1>To do list</h1></header>
+    <header><h1>To do list:</h1></header>
 
     <main>
       <div id="stage">
-        <input id="card__title" type="text" placeholder="title..." />
+        <input id="card__title" type="text" value="title..."  />
         <div>
           <textarea
             id="card__describtion"
             placeholder="describtion..."
-          ></textarea>
+          >describtion</textarea>
         </div>
-        <button id="save">save</button>
+        <button id="add">add</button>
+        <button id="clear__list">clear list</button>
       </div>
       <div id="cards__container">
       </div>
