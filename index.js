@@ -9,8 +9,6 @@ const editCard = document.querySelector(".edit");
 const cardsContainer = document.getElementById("cards__container");
 const clearList = document.getElementById("clear__list");
 let cards = [];
-console.log(cards);
-
 //F (Functino declaration)===============================
 const deleteHandler = () => {
   let deleteButtons = document.querySelectorAll(".delete");
@@ -20,6 +18,21 @@ const deleteHandler = () => {
     });
   });
 };
+//F=======================================================
+const viewHandler = ()=>{
+  const view = document.querySelectorAll(".view");
+  console.log("view",view)
+  view.forEach((btn)=>{
+    btn.addEventListener("click",(event)=>{
+      let card = event.target.parentElement
+      console.log("card",card)
+    })})
+}
+//F=======================================================
+function clearHandler() {
+  cardsContainer.innerHTML = "";
+  cards = [];
+}
 
 //F=======================================================
 const setCards = (item) => {
@@ -28,7 +41,6 @@ const setCards = (item) => {
 const getCards = () => {
   const value = localStorage.getItem("cards");
   let sValue = JSON.parse(value);
-  console.log(sValue);
 };
 
 //F=======================================================
@@ -76,18 +88,16 @@ const updateDOMWithCards = () => {
         </div >
         <button class="edit">edit</button>
         <button class="delete" >delete</button>
+        <button class="view" >view</button>
     </div>`;
     deleteHandler();
     editOrSaveHandler();
+    viewHandler();
     cards.unshift(newCard);
-    console.log(cards);
   }
 };
 
 //E (Event listeners)==========================================
 add.addEventListener("click", updateDOMWithCards);
 clearList.addEventListener("click", clearHandler);
-function clearHandler() {
-  cardsContainer.innerHTML = "";
-  cards = [];
-}
+  

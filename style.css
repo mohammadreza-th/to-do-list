@@ -20,22 +20,22 @@
   --blue-set-3: rgb(0, 0, 150);
   --blue-set-4: rgb(0, 0, 200);
 }
-input{
-    background-color:none;
-    border:none
+input {
+  background-color: none;
+  border: none;
 }
-button{
-    color: var(--green-set-3);
-    border: none;
+button {
+  color: var(--green-set-3);
+  border: none;
 }
-button:hover{
-    background-color: var(--green-set-3);
-    color: white;
+button:hover {
+  background-color: var(--green-set-3);
+  color: white;
 }
 
 header {
   text-align: center;
-  color: var(--green-set-3)
+  color: var(--green-set-3);
 }
 main {
   margin: 0 auto;
@@ -46,7 +46,6 @@ main {
   height: 500px;
 }
 #stage {
-  
   padding-bottom: 10px;
   margin-bottom: 10px;
   display: flex;
@@ -58,10 +57,11 @@ main {
   background-color: var(--green-set-7);
 }
 #card__describtion {
+  border: none;
   background-color: var(--green-set-7);
 }
-#card__importance{
-  accent-color:var(--green-set-3)
+#card__importance {
+  accent-color: var(--green-set-3);
 }
 
 #cards__container {
@@ -70,6 +70,7 @@ main {
   grid-gap: 10px;
 }
 .card {
+  padding: 10px;
   box-shadow: 1px 1px 5px 1px grey;
   border-radius: 3px;
   width: 114px;
@@ -93,12 +94,43 @@ main {
   color: none;
 }
 
-.card__importance{
+.card__importance {
   accent-color: var(--green-set-3);
-  background-color: red;
-
+  width: 100px;
 }
-.card__importance:-webkit-slider-thumb:disabled {
-  accent-color: var(--green-set-1);
-  background-color: red;
-} 
+.modal {
+  background-color: var(--green-set-5);
+  color: white;
+  position: fixed;
+  border-radius: 5px;
+}
+.modal__container {
+  width: 250px;
+  height: 250px;
+  position: relative;
+}
+.modal__title {
+  height: 20%;
+  color: var(--green-set-6);
+  font-size: 25px;
+  padding-top: 10px;
+  padding-left: 10px;
+  border-bottom: 1px solid white;
+}
+.modal__describtion {
+  height: 20%;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+.modal__importance {
+  height: 20%;
+  color: var(--green-set-7);
+  padding-top: 10px;
+  padding-left: 10px;
+}
+.modal button {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  border-radius: 2px;
+}
