@@ -1,4 +1,5 @@
 <!-- بسم الله الرحمن الرحیم -->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -7,35 +8,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>To do list</title>
     <link rel="stylesheet" href="./style.css" />
+    <script
+      src="https://kit.fontawesome.com/2c3fb0c56d.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="./index.js" defer></script>
   </head>
   <body>
     <header><h1>To do list:</h1></header>
 
     <main>
-      <div class="modal">
-        <div class="modal__container">
-          <div class="modal__title">title</div>
-          <div class="modal__describtion">describtion</div>
-          <div class="modal__importance">importance</div>
-          <button id="close__view">x</button>
-        </div >
-      </div>
-      <div id="stage">
-        <input id="card__title" type="text" value="title..."  />
+      <!-- <div class="card modal">
+        <div class="card-text__container">
+          <div>
+            <input class="card__title" type="text" value="sdf" disabled />
+          </div>
+          <div>
+            <input
+              type="text"
+              class="card__describtion"
+              value="sfdf"
+              disabled
+            />
+          </div>
+          <input
+            type="range"
+            class="card__importance"
+            value="SDF"
+            min="1"
+            max="5"
+            disabled
+          />
+        </div>
         <div>
-          <textarea
-            id="card__describtion"
-            placeholder="describtion..."
-          >describtion</textarea>
+          <button class="edit">edit</button>
+          <button class="delete">delete</button>
+          <button class="view">view</button>
+        </div>
+      </div> -->
+      <div id="stage">
+        <input id="card__title" type="text" value="title..." />
+        <div>
+          <textarea id="card__describtion" placeholder="describtion...">
+describtion</textarea
+          >
         </div>
         <button id="add">add</button>
         <button id="clear__list">clear list</button>
         <label for="card__importance">importance level:</label>
-        <input id="card__importance" type="range" min="1" max="5"  />
+        <input id="card__importance" type="range" min="1" max="5" />
       </div>
-      <div id="cards__container">
-      </div>
+      <div id="cards__container"></div>
     </main>
   </body>
 </html>

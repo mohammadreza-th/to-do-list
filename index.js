@@ -8,6 +8,7 @@ const add = document.getElementById("add");
 const editCard = document.querySelector(".edit");
 const cardsContainer = document.getElementById("cards__container");
 const clearList = document.getElementById("clear__list");
+// const closeView = document.getElementById("close__view")
 let cards = [];
 //F (Functino declaration)===============================
 const deleteHandler = () => {
@@ -21,11 +22,11 @@ const deleteHandler = () => {
 //F=======================================================
 const viewHandler = ()=>{
   const view = document.querySelectorAll(".view");
-  console.log("view",view)
   view.forEach((btn)=>{
     btn.addEventListener("click",(event)=>{
-      let card = event.target.parentElement
-      console.log("card",card)
+      let   card = event.target.parentElement
+      console.log(card.classList);
+      card.classList.add("modal");
     })})
 }
 //F=======================================================
@@ -86,9 +87,9 @@ const updateDOMWithCards = () => {
             <input type="text" class="card__describtion" value="${describtion.value}" disabled />            
             <input type="range" class="card__importance" value="${importance.value}" min="1" max="5" disabled />            
         </div >
-        <button class="edit">edit</button>
-        <button class="delete" >delete</button>
-        <button class="view" >view</button>
+        <button class="edit fa fa-edit"></button>
+        <button class="delete fa fa-trash"></button>
+        <button class="view fa fa-display"></button>
     </div>`;
     deleteHandler();
     editOrSaveHandler();
@@ -100,4 +101,6 @@ const updateDOMWithCards = () => {
 //E (Event listeners)==========================================
 add.addEventListener("click", updateDOMWithCards);
 clearList.addEventListener("click", clearHandler);
-  
+// closeView.addEventListener("click", closeViewHandler);
+function closeViewHandler(){
+modal.style.display = "none"}
