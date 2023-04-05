@@ -87,9 +87,11 @@ const updateDOMWithCards = () => {
             <input type="text" class="card__describtion" value="${describtion.value}" disabled />            
             <input type="range" class="card__importance" value="${importance.value}" min="1" max="5" disabled />            
         </div >
-        <button class="edit fa fa-edit"></button>
-        <button class="delete fa fa-trash"></button>
-        <button class="view fa fa-display"></button>
+        <div class="buttons">
+          <button class="edit fa fa-edit"></button>
+          <button class="delete fa fa-trash"></button>
+          <button class="view fa fa-display"></button>
+        </div>
     </div>`;
     deleteHandler();
     editOrSaveHandler();
